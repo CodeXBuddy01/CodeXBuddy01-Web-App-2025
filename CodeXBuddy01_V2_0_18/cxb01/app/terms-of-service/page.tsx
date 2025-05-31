@@ -1,46 +1,41 @@
-// pages/terms-of-service.tsx (or app/terms-of-service/page.tsx)
+// ✅ Example: pages/terms-of-service.tsx (for Pages Router)
+// Or: app/terms-of-service/page.tsx (for App Router in Next.js 13+)
 
 export default function TermsOfService() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-6">Terms of Service</h1>
-
-      <p className="mb-4">
-        Welcome to CodeXBuddy01! These terms and conditions outline the rules and
-        regulations for the use of our website and services.
+    <div className="max-w-4xl mx-auto px-4 py-16 text-gray-800">
+      <h1 className="text-4xl font-bold mb-6 text-blue-700">Terms of Service</h1>
+      <p className="mb-6">
+        Welcome to <strong>CodeXBuddy01</strong>. By accessing our website and using our services, you agree to comply with and be bound by the following terms and conditions.
       </p>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">1. Acceptance of Terms</h2>
-      <p className="mb-4">
-        By accessing this website, we assume you accept these terms and conditions in full.
-      </p>
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-2">1. Acceptance of Terms</h2>
+        <p>
+          By using our services, you agree to be bound by these Terms of Service and all applicable laws and regulations.
+        </p>
+      </section>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">2. Use of Services</h2>
-      <p className="mb-4">
-        You agree to use our services only for lawful purposes and not to misuse or
-        exploit any part of our platform.
-      </p>
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-2">2. Use of Services</h2>
+        <p>
+          You are responsible for your use of the services and for any content you provide. You agree to use the service in compliance with all applicable laws.
+        </p>
+      </section>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">3. Intellectual Property</h2>
-      <p className="mb-4">
-        All content, branding, and source code belong to CodeXBuddy01 unless stated otherwise.
-      </p>
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-2">3. Modifications</h2>
+        <p>
+          We reserve the right to modify or discontinue the service at any time without notice.
+        </p>
+      </section>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">4. Termination</h2>
-      <p className="mb-4">
-        We reserve the right to suspend or terminate access to our services if you violate these terms.
-      </p>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">5. Changes to Terms</h2>
-      <p className="mb-4">
-        We may update these terms from time to time. Continued use of the service implies acceptance of any updates.
-      </p>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">6. Contact Us</h2>
-      <p>
-        If you have any questions about these Terms, contact us at{" "}
-        <strong>codexbuddy01@gmail.com</strong>
-      </p>
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-2">4. Contact Us</h2>
+        <p>
+          If you have questions about our terms, please email us at <a href="mailto:codexbuddy01@gmail.com" className="text-blue-600 underline">codexbuddy01@gmail.com</a>.
+        </p>
+      </section>
     </div>
   );
 }
