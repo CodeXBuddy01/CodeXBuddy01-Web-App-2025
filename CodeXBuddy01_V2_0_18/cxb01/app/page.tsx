@@ -15,7 +15,7 @@ export default function Home() {
               <Code className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
             </div>
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              CodeXBuddy
+              CodeXBuddy01
             </span>
           </div>
 
@@ -520,7 +520,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="font-bold text-gray-900">Email</h3>
-                      <p className="text-gray-600">rakesh@codexbuddy.com</p>
+                      <p className="text-gray-600">codexbuddy01@gmail.com</p>
                       <p className="text-sm text-gray-500">I'll respond within 24 hours</p>
                     </div>
                   </CardContent>
@@ -577,7 +577,7 @@ export default function Home() {
                   <Code className="h-5 w-5 text-white" />
                 </div>
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  CodeXBuddy
+                  CodeXBuddy01
                 </span>
               </div>
               <p className="text-gray-400 text-sm">
@@ -618,7 +618,7 @@ export default function Home() {
 
           <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400 text-center md:text-left">
-              &copy; {new Date().getFullYear()} CodeXBuddy. All rights reserved.
+              &copy; {new Date().getFullYear()} CodeXBuddy01. All rights reserved.
             </p>
             <div className="flex gap-4">
               <Link href="#" className="text-sm text-gray-400 hover:text-white">

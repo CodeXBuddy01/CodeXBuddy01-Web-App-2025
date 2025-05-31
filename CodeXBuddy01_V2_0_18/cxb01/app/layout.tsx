@@ -5,7 +5,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "CodeXBuddy - Web Development Agency",
+  title: "CodeXBuddy01 - Web Development Agency",
   description: "We build cutting-edge web applications that drive business growth and deliver exceptional user experiences.",
 }
 
