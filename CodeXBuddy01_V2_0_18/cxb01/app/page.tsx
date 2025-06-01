@@ -23,6 +23,7 @@ import {
   Clock,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -521,7 +522,12 @@ export default function Home() {
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
                         <div className="relative w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 rounded-full border-4 border-white shadow-lg flex items-center justify-center">
                           <span className="text-3xl font-bold text-blue-600">
-                            RK
+                            <Image
+                              src="/photo.jpg" // इसे अपने actual फोटो path से बदलें
+                              alt="Your Profile"
+                              fill
+                              className="object-cover rounded-full"
+                            />
                           </span>
                         </div>
                       </div>
@@ -588,7 +594,11 @@ export default function Home() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">
                     Send Me a Message
                   </h3>
-                  <form className="space-y-6">
+                  <form
+                    action="https://formspree.io/f/myzjgadw" // Replace with your own Formspree endpoint
+                    method="POST"
+                    className="space-y-6"
+                  >
                     <div className="grid gap-4 sm:grid-cols-2">
                       <div className="space-y-2">
                         <label
@@ -599,7 +609,9 @@ export default function Home() {
                         </label>
                         <input
                           id="name"
-                          className="flex h-12 w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                          name="name"
+                          required
+                          className="flex h-12 w-full rounded-lg border border-gray-200 px-4 py-3 text-sm placeholder:text-gray-500 focus-visible:ring-2 focus-visible:ring-blue-500"
                           placeholder="Enter your name"
                         />
                       </div>
@@ -612,8 +624,10 @@ export default function Home() {
                         </label>
                         <input
                           id="email"
+                          name="email"
                           type="email"
-                          className="flex h-12 w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                          required
+                          className="flex h-12 w-full rounded-lg border border-gray-200 px-4 py-3 text-sm placeholder:text-gray-500 focus-visible:ring-2 focus-visible:ring-blue-500"
                           placeholder="Enter your email"
                         />
                       </div>
@@ -627,7 +641,9 @@ export default function Home() {
                       </label>
                       <select
                         id="subject"
-                        className="flex h-12 w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                        name="subject"
+                        required
+                        className="flex h-12 w-full rounded-lg border border-gray-200 px-4 py-3 text-sm focus-visible:ring-2 focus-visible:ring-blue-500"
                       >
                         <option>MVP Development</option>
                         <option>Web Application</option>
@@ -646,13 +662,17 @@ export default function Home() {
                       </label>
                       <textarea
                         id="message"
-                        className="flex min-h-[120px] w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm ring-offset-background placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                        name="message"
+                        required
+                        className="flex min-h-[120px] w-full rounded-lg border border-gray-200 px-4 py-3 text-sm placeholder:text-gray-500 focus-visible:ring-2 focus-visible:ring-blue-500"
                         placeholder="Describe your startup idea, goals, and timeline..."
                       />
                     </div>
-                    <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-                      Send Message
-                      <ArrowRight className="ml-2 h-5 w-5" />
+                    <Button
+                      type="submit"
+                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 rounded-lg shadow-lg hover:shadow-xl"
+                    >
+                      Send Message <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </form>
                 </CardContent>
