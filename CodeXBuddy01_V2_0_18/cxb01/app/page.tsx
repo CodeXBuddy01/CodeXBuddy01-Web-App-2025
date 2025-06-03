@@ -2,6 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
+  DollarSign,
+  Leaf,
+  BookOpen,
+  Dumbbell,
+  Briefcase,
   ArrowRight,
   Code,
   Globe,
@@ -327,58 +332,64 @@ export default function Home() {
             <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  name: "TechFlow",
-                  category: "SaaS Platform",
+                  name: "EdTech Platform",
+                  category: "Education",
+                  color: "from-blue-500 to-purple-500",
+                  metrics: "Live Now",
                   description:
-                    "AI-powered project management tool that raised $2M in Series A",
-                  metrics: "150% user growth",
-                  icon: Globe,
-                  color: "from-blue-500 to-cyan-500",
+                    "An interactive learning platform designed for modern students and educators. Features real-time content delivery and analytics.",
+                  link: "https://projectpalacebazaar.vercel.app",
+                  icon: Code,
                 },
                 {
-                  name: "EcoMarket",
-                  category: "E-commerce",
+                  name: "FundMyCup",
+                  category: "Crowdfunding",
+                  color: "from-pink-500 to-red-500",
+                  metrics: "Active",
                   description:
-                    "Sustainable marketplace connecting eco-friendly brands with consumers",
-                  metrics: "$500K revenue",
-                  icon: ShoppingCart,
-                  color: "from-green-500 to-emerald-500",
+                    "A fundraising platform built to support creative ideas and startups with easy donations and campaign creation.",
+                  link: "https://fundmycup.vercel.app/",
+                  icon: DollarSign,
                 },
                 {
-                  name: "HealthSync",
-                  category: "HealthTech",
+                  name: "2ndHand eBook Store",
+                  category: "Marketplace",
+                  color: "from-green-500 to-teal-500",
+                  metrics: "Coming Soon",
                   description:
-                    "Telemedicine platform serving 10,000+ patients monthly",
-                  metrics: "10K+ users",
-                  icon: Target,
-                  color: "from-red-500 to-pink-500",
+                    "A book trading platform where users can buy and sell used books easily with great UI and fast search.",
+                  link: "https://2ndhand-ebook.vercel.app",
+                  icon: BookOpen,
                 },
                 {
-                  name: "EduLearn",
-                  category: "EdTech",
-                  description:
-                    "Online learning platform with interactive courses and certifications",
-                  metrics: "50K+ students",
-                  icon: Search,
-                  color: "from-purple-500 to-indigo-500",
-                },
-                {
-                  name: "FinanceFlow",
-                  category: "FinTech",
-                  description:
-                    "Personal finance management app with AI-driven insights",
-                  metrics: "25K+ downloads",
-                  icon: TrendingUp,
+                  name: "CXB01 Gym",
+                  category: "Fitness",
                   color: "from-yellow-500 to-orange-500",
+                  metrics: "Launched",
+                  description:
+                    "Landing page for a modern fitness brand offering customized training plans and membership management.",
+                  link: "https://cxb01gym.vercel.app/",
+                  icon: Dumbbell,
                 },
                 {
-                  name: "FoodieHub",
-                  category: "Food Delivery",
+                  name: "Startup Landing",
+                  category: "Company",
+                  color: "from-indigo-500 to-cyan-500",
+                  metrics: "Published",
                   description:
-                    "Local food delivery platform connecting restaurants with customers",
-                  metrics: "100+ restaurants",
-                  icon: Smartphone,
-                  color: "from-teal-500 to-blue-500",
+                    "Professional landing page for startups to attract investors and showcase vision, mission and services.",
+                  link: "https://codexbuddy01-beta-version.vercel.app/",
+                  icon: Briefcase,
+                },
+                {
+                  name: "Crop Yield Prediction",
+                  category: "AgriTech",
+                  metrics: "AI Model",
+                  description:
+                    "A machine learning-based platform that predicts crop yield based on state, season, and crop inputs. Built using Flask, scikit-learn, and deployed on Render.",
+                  link: "https://india-based-crop-prediction.onrender.com/",
+                  color: "from-green-500 to-lime-500",
+                  icon: Leaf, // If you're using Lucide or Heroicons, import `Leaf` icon
                 },
               ].map((project, index) => (
                 <Card
@@ -418,7 +429,9 @@ export default function Home() {
                       </p>
                       <div className="flex justify-between items-center pt-2">
                         <Link
-                          href="#"
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-blue-600 hover:text-blue-700 font-semibold flex items-center group-hover:translate-x-1 transition-transform duration-300"
                         >
                           Live Demo <ArrowRight className="ml-1 h-4 w-4" />
@@ -462,7 +475,7 @@ export default function Home() {
                   </h2>
                   <p className="text-gray-600 text-lg leading-relaxed">
                     A passionate full-stack developer and startup enthusiast
-                    with over 2 years of experience helping startups transform
+                    with over 2+ years of experience helping startups transform
                     their ideas into successful digital products.
                   </p>
                 </div>
