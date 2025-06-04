@@ -358,7 +358,7 @@ export default function Home() {
                   metrics: "Coming Soon",
                   description:
                     "A book trading platform where users can buy and sell used books easily with great UI and fast search.",
-                  link: "https://2ndhand-ebook.vercel.app",
+                  link: "https://book-cart-2025.vercel.app/",
                   icon: BookOpen,
                 },
                 {
