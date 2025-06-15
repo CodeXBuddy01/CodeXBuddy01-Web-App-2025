@@ -459,7 +459,7 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="w-full py-16 md:py-24 bg-white">
+        {/* <section id="about" className="w-full py-16 md:py-24 bg-white">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-2 items-center">
               <div className="flex flex-col justify-center space-y-6 text-center lg:text-left">
@@ -574,6 +574,148 @@ export default function Home() {
                     </CardContent>
                   </Card>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section> */}
+
+        <section id="about" className="w-full py-16 md:py-24 bg-white">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200 px-4 py-2 text-sm font-medium mx-auto w-fit">
+                👨‍💻 Meet the Founders
+              </Badge>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mt-4">
+                We're{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  Rakesh Kumar
+                </span>{" "}
+                &{" "}
+                <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  Arvind Thakur
+                </span>
+              </h2>
+              <p className="text-gray-600 text-lg mt-2">
+                Passionate full-stack developers and startup builders working
+                together to bring ideas to life.
+              </p>
+            </div>
+
+            <div className="grid gap-12 lg:grid-cols-2 items-center">
+              {[
+                {
+                  name: "Rakesh Kumar",
+                  title: "Founder & Tech-Driven Entrepreneur",
+                  description: "Building the future, one startup at a time",
+                  img: "/photo.jpg",
+                },
+                {
+                  name: "Arvind Thakur",
+                  title: "Co-Founder & Startup Operator",
+                  description: "Simplifying systems, scaling startups",
+                  img: "/arvind.jpg",
+                },
+              ].map((founder, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col lg:flex-row items-center gap-8"
+                >
+                  <div className="relative max-w-sm mx-auto">
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-3xl transform rotate-6 opacity-20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-500 rounded-3xl transform -rotate-6 opacity-20"></div>
+                    <Card className="relative border-0 shadow-2xl bg-white p-8">
+                      <CardContent className="p-0 text-center space-y-6">
+                        <div className="relative w-32 h-32 mx-auto">
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                          <div className="relative w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+                            <Image
+                              src={founder.img}
+                              alt={`${founder.name}'s Profile`}
+                              fill
+                              className="object-cover rounded-full"
+                            />
+                          </div>
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-gray-900">
+                            {founder.name}
+                          </h3>
+                          <p className="text-blue-600 font-semibold">
+                            {founder.title}
+                          </p>
+                          <p className="text-gray-600 text-sm mt-2">
+                            {founder.description}
+                          </p>
+                        </div>
+                        <div className="flex justify-center gap-4">
+                          {[
+                            { icon: "💼", label: "LinkedIn" },
+                            { icon: "🐙", label: "GitHub" },
+                            { icon: "🐦", label: "Twitter" },
+                          ].map((social, index) => (
+                            <Button
+                              key={index}
+                              variant="outline"
+                              size="sm"
+                              className="rounded-full"
+                            >
+                              {social.icon}
+                            </Button>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose us */}
+        <section className="w-full bg-gradient-to-br from-white via-blue-50 to-white py-16 px-4 md:px-12 rounded-3xl shadow-xl">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            {/* Left - Why Choose Me */}
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">
+                Why Startups <span className="text-blue-600">Choose Me</span>
+              </h2>
+              <ul className="space-y-5">
+                {[
+                  "🚀 Rapid MVP development to validate ideas quickly",
+                  "💡 Strategic technical guidance for scaling",
+                  "🎯 Focus on user experience and business goals",
+                  "⚡ Agile development process with quick iterations",
+                  "📈 Post-launch support and optimization",
+                ].map((point, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 group hover:translate-x-1 transition-transform duration-300"
+                  >
+                    <div className="mt-1">
+                      <CheckCircle className="text-green-500 w-5 h-5" />
+                    </div>
+                    <p className="text-gray-700 group-hover:text-gray-900 font-medium">
+                      {point}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Right - Stats */}
+            <div className="grid grid-cols-3 gap-6">
+              <div className="text-center bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                <div className="text-3xl font-bold text-blue-600">18+</div>
+                <p className="text-sm text-gray-600 mt-1">Projects Delivered</p>
+              </div>
+              <div className="text-center bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                <div className="text-3xl font-bold text-green-600">100+</div>
+                <p className="text-sm text-gray-600 mt-1">Happy Customers</p>
+              </div>
+              <div className="text-center bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                <div className="text-3xl font-bold text-purple-600">2+</div>
+                <p className="text-sm text-gray-600 mt-1">Years Experience</p>
               </div>
             </div>
           </div>
